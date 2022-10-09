@@ -6,7 +6,7 @@
 
 ## Get Started
 
-#### `Git Clone` [http://localhost:3000](http://localhost:3000)
+#### `Git Clone` [https://github.com/Collins-01/Netflix-Website](https://github.com/Collins-01/Netflix-Website)
 
 #### `npm install ` To install all dependencies
 
