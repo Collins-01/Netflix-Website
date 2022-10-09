@@ -28,35 +28,3 @@ export const provider= new GoogleAuthProvider();
 
 
   
-
-
-// const signInUser =  async (email, password)=> {
-//   await signInWithEmailAndPassword(auth, email, password)
-//   .then((authUser) => {
-//     console.log(authUser);
-//   })
-//   .catch((error) => {
-//     alert(error.message);
-//   });
-// }
-// const registerUser =  async(email,password)=>{
-//   await createUserWithEmailAndPassword(auth, email, password)
-//   .then((authUser) => {
-//     console.log(authUser);
-//   })
-//   .catch((error) => {
-//     alert(error.message);
-//     // ..
-//   });
-// }
-
-// const logOutUser = async()=>{
-//  await signOut(auth).then(() => {
-  
-//   }).catch((error) => {
-//     alert(error.message);
-//   });
-// }
-
-// export {auth, signInUser,registerUser, logOutUser, app};
-// export default db;

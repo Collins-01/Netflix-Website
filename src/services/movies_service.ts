@@ -16,10 +16,9 @@ export  default class MoviesService {
             const mov = new Movie(element)
             list.push(mov)
           }
-          
+  
           return list;
         
-        //   return convertedMovies;
         }
         else{
             return  [];
@@ -27,6 +26,7 @@ export  default class MoviesService {
         
         
        } catch (error) {
+        console.log(error);
         throw new Error(`${error}`)
        }
     }
