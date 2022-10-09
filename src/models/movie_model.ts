@@ -4,7 +4,7 @@
 //
 //   const movie = Convert.toMovie(json);
 
-export default interface Movie {
+export default class Movie {
     adult?:             boolean;
     backdrop_path?:     string;
     id?:                number;
@@ -20,15 +20,27 @@ export default interface Movie {
     video?:             boolean;
     vote_average?:      number;
     vote_count?:        number;
+    
+    constructor(json: any){
+        this.adult = json.adult;
+        this.backdrop_path = json.backdrop_path;
+        this.id = json.id;
+        this.title = json.title;
+        this.original_language = json.original_language;
+        this.original_title = json.original_title;
+        this.overview = json.overview;
+        this.poster_path = json.poster_path;
+        this.media_type = json.media_type;
+        this.genre_ids = json.genre_ids;
+        this.popularity = json.popularity;
+        this.release_date = json.release_date;
+        this.video = json.video;
+        this.vote_average = json.video_id;
+        this.vote_count = json.vote_average;
+
+        
+    }
 }
 
 // Converts JSON strings to/from your types
-export class Convert {
-    public static toMovie(json: string): Movie {
-        return JSON.parse(json);
-    }
 
-    public static movieToJson(value: Movie): string {
-        return JSON.stringify(value);
-    }
-}

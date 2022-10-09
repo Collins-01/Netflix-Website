@@ -32,36 +32,37 @@ function Banner() {
 
 
 
-  if(loading){
-    return <div> <h1>Loading.... </h1></div>
-  }
-  if(error.length > 0){
-    return <div> <h1>An error ocurreed  {error}</h1></div>
-  }
+  // if(loading){
+  //   return <div> <h1>Loading.... </h1></div>
+  // }
+  // if(error.length > 0){
+  //   return <div> <h1>An error ocurreed  {error}</h1></div>
+  // }
 
-  if(movie!==null && !loading){
-    return (
-      <header className='banner' style={{
-          backgroundSize: "cover",
-          backgroundImage: `url("https://image.tmdb.org/t/p/w500/${movie?.backdrop_path}")`,
-          backgroundPosition: "center center",
-      }}>
-          <div className='banner__contents'>
-              <h1 className='banner__title'>{movie?.title || movie?.original_title}</h1>
-              <div className='banner__buttons'>
-                  <button className='banner__button'>Play</button>
-                  <button className='banner__button'>My List</button>
-              </div>
-              <div className='banner__descriptionBox'>
-              <h3 className='banner__description'>{movie && truncate(movie?.overview!, 150)} </h3>
-              </div>
-              
-          </div>
-          <div className='banner--fadeBottom'/>
-      </header>
-    )
-  }
-  return <div>State Not Detected</div>
+  // if(movie!==null && !loading){
+   
+  // }
+  return (
+    <header className='banner' style={{
+        backgroundSize: "cover",
+        backgroundImage: `url("https://image.tmdb.org/t/p/w500/${movie?.backdrop_path}")`,
+        backgroundPosition: "center center",
+    }}>
+        <div className='banner__contents'>
+            <h1 className='banner__title'>{movie?.title || movie?.original_title}</h1>
+            <div className='banner__buttons'>
+                <button className='banner__button'>Play</button>
+                <button className='banner__button'>My List</button>
+            </div>
+            <div className='banner__descriptionBox'>
+            <h3 className='banner__description'>{movie && truncate(movie?.overview!, 150)} </h3>
+            </div>
+            
+        </div>
+        <div className='banner--fadeBottom'/>
+    </header>
+  )
+  // return <div>State Not Detected</div>
 }
 
 export default Banner

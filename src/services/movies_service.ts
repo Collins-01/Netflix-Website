@@ -1,5 +1,5 @@
 import axios from "axios";
-import Movie, { Convert } from "../models/movie_model";
+import Movie from "../models/movie_model";
 
 export  default class MoviesService {
     
@@ -10,12 +10,15 @@ export  default class MoviesService {
         const moviesList = request.data.results as [];
 
         if(moviesList.length > 0) {
-          
-          
-          // const convertedMovies = moviesList.map((m) =>Convert.toMovie(m));
-          return [];
+          const list: Movie[] = [];
+          for (let index = 0; index < moviesList.length; index++) {
+            const element = moviesList[index];
+            const mov = new Movie(element)
+            list.push(mov)
+          }
+  
+          return list;
         
-        //   return convertedMovies;
         }
         else{
             return  [];
@@ -23,6 +26,7 @@ export  default class MoviesService {
         
         
        } catch (error) {
+        console.log(error);
         throw new Error(`${error}`)
        }
     }
